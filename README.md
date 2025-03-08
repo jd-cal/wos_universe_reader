@@ -19,7 +19,8 @@ Features of this executable:
 - View details of planets when clicked
 - Copy coordinates of planets/stars when clicked to clipboard
 
-Check source code at: 
+Check source code at: https://github.com/jdcalica/wos_universe_reader/tree/main
+
 If executable won't run due to Windows security labeling it as a virus, please DISABLE it or ALLOW the executable and go have a look at the source code yourself.
 
 Have fun viewing the universe!
