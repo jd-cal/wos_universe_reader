@@ -1,5 +1,5 @@
-# wos_universe_reader
-An executable program that plots a universe star map from a file called universedata.json 
+# WOS_UNIVERSE_READER
+An executable program that plots a universe star map from a file named universedata.json 
 
 WOSMAPREADER.exe 
 
