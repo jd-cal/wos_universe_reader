@@ -2,7 +2,9 @@
 An executable program that plots a universe star map from a file called universedata.json 
 
 WOSMAPREADER.exe 
+
 Made by: JDC51
+
 Discord: doeni__er
 
 
