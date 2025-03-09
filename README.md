@@ -8,7 +8,7 @@ Made by: JDC51
 Discord: doeni__er
 
 
-IMPORTANT
+# IMPORTANT
 For the map reader executable to work, you should have a universe data file at the same directory as the executor 
 (in .json file format) and must be named universedata.json.
 
