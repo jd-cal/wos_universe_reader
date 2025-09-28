@@ -4,12 +4,10 @@ import numpy as np
 import tkinter as tk
 from tkinter import messagebox
 
-# Load the JSON file
 file_path = "universedata.json"
 with open(file_path, "r") as file:
     data = json.load(file)
 
-# Define colors for celestial bodies
 object_colors = {
     "Red": "red",
     "Yellow": "yellow",
@@ -19,7 +17,6 @@ object_colors = {
     "BlackHole": "black"
 }
 
-# Define planet colors
 planet_colors = {
     "Terra": "green",
     "Ocean": "blue",
@@ -34,7 +31,6 @@ planet_colors = {
     "RobotDepot": "red"
 }
 
-# Extract celestial objects
 stars = []
 black_holes = []
 star_map = {}
@@ -143,13 +139,13 @@ def show_planets(system_coords, star_type):
         min_dist = float("inf")
         selected_item = None
 
-        # Click on the star or black hole
+
         if np.sqrt(click_x ** 2 + click_y ** 2) < 1.5:
             coordinates = ", ".join(map(str, system_coords[:2]))
             copy_to_clipboard(f"{coordinates}, 0, 0, false")
             return
 
-        # Click on a planet
+
         for (z, w), (details, full_coords) in planet_positions.items():
             dist = np.sqrt((z - click_x) ** 2 + (w - click_y) ** 2)
             if dist < min_dist:
@@ -161,7 +157,7 @@ def show_planets(system_coords, star_type):
             copy_to_clipboard(f"{", ".join(map(str, full_coords))}, true")
             show_details(details, full_coords)
 
-    # Hover to Show Planet Name + Full Coordinates
+
     def hover(event):
         if event.inaxes is None:
             return
@@ -183,9 +179,10 @@ def show_planets(system_coords, star_type):
         
         fig2.canvas.draw()
 
-    fig2.canvas.mpl_connect("button_press_event", on_click)  # Click to copy & open details
+    fig2.canvas.mpl_connect("button_press_event", on_click) 
     fig2.canvas.mpl_connect("motion_notify_event", hover)
     plt.show()
 
 fig.canvas.mpl_connect("button_press_event", plot_planets)
 plt.show()
+
